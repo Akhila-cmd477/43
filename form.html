@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 25px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Event Registration</h2>
+
+        <form onsubmit="register(event)">
+
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Phone Number:</label>
+            <input type="tel" placeholder="Enter phone number" required>
+
+            <label>Select Event:</label>
+            <select required>
+                <option value="">Choose an event</option>
+                <option>Workshop</option>
+                <option>Seminar</option>
+                <option>Technical Fest</option>
+                <option>Cultural Event</option>
+            </select>
+
+            <label>Event Date:</label>
+            <input type="date" required>
+
+            <button type="submit">Register Now</button>
+
+        </form>
+    </div>
+
+    <script>
+        function register(event) {
+            event.preventDefault();
+            alert("Registration Successful!");
+        }
+    </script>
+
+</body>
+</html>
